@@ -22,8 +22,8 @@ sudo pacman -S xdg-desktop-portal-hyprland --noconfirm
 
 # Install audio pakages
 
-sudo pacman -S pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack alsa-utils
-sudo pacman -S pavucontrol
+sudo pacman -S pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack alsa-utils --noconfirm
+sudo pacman -S pavucontrol --noconfirm
 
 if systemctl --user is-enabled pipewire.service &>/dev/null; then
     echo "Pipewire sudah diaktifkan."
@@ -35,30 +35,30 @@ else
 fi
 
 # bluetooth packages
-sudo pacman -S bluez bluez-utils blueman
+sudo pacman -S bluez bluez-utils blueman --noconfirm
 
 sudo systemctl enable --now bluetooth.service
 
 # Install file manager
-sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin tumbler
+sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin tumbler --noconfirm
 
 # Install notification daemon
-sudo pacman -S mako
+sudo pacman -S mako --noconfirm
 
 # Install clipboard
-sudo pacman -S cliphist wl-clipboard
+sudo pacman -S cliphist wl-clipboard --noconfirm
 
 # Install polkit agent
-sudo pacman -S hyprpolkitagent
+sudo pacman -S hyprpolkitagent --noconfirm
 
 systemctl --user enable --now hyprpolkitagent.service
 systemctl --user start --now hyprpolkitagent.service
 
 # Install packages from AUR
-yay -S --noconfirm google-chrome
+yay -S --noconfirm google-chrome 
 yay -S --noconfirm visual-studio-code-bin
-yay -S --noconfirm mpvpaper
-yay -S --noconfirm yay -S greetd
+yay -S --noconfirm swww
+yay -S --noconfirm greetd
 
 # install extra packages
 sudo pacman -S --noconfirm quickshell wofi obsidian
