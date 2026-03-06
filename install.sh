@@ -14,6 +14,7 @@ rm -rf /tmp/yay
 
 # update system
 sudo pacman -Syu --noconfirm
+sudo pacman -S --noconfirm zsh zsh-autosuggestions zsh-syntax-highlighting
 
 
 # Install hyprland
@@ -61,7 +62,7 @@ yay -S --noconfirm swww
 yay -S --noconfirm greetd
 
 # install extra packages
-sudo pacman -S --noconfirm quickshell wofi obsidian
+sudo pacman -S --noconfirm quickshell rofi obsidian
 sudo pacman -S --noconfirm noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra
 fc-cache -fv
 
@@ -71,3 +72,5 @@ echo "Creating symlink..."
 ln -sf ~/dotfiles/.config/hypr ~/.config/hypr
 ln -sf ~/dotfiles/.config/quickshell ~/.config/quickshell
 ln -sf ~/dotfiles/.config/mako ~/.config/mako
+ln -sf ~/dotfiles/.config/kitty ~/.config/kitty
+ln -sf ~/dotfiles/.config/rofi ~/.config/rofi
