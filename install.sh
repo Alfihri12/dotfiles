@@ -14,7 +14,7 @@ rm -rf /tmp/yay
 
 # update system
 sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm zsh zsh-autosuggestions zsh-syntax-highlighting
+sudo pacman -S --noconfirm brightnessctl zsh zsh-autosuggestions zsh-syntax-highlighting
 
 
 # Install hyprland
