@@ -62,6 +62,9 @@ sudo pacman -S hyprpolkitagent --noconfirm
 
 systemctl --user start --now hyprpolkitagent.service
 
+# install keyring
+sudo pacman -S gnome-keyring --noconfirm
+
 # Install packages from AUR
 yay -S --noconfirm google-chrome visual-studio-code-bin swww greetd
 
